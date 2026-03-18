@@ -1,7 +1,5 @@
 # Web & UI
-flask
 streamlit
-waitress
 
 # Data Handling
 numpy
@@ -10,7 +8,6 @@ pandas
 # Machine Learning Engines
 scikit-learn
 xgboost
-tensorflow-cpu
 joblib
 
 # Utilities
