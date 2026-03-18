@@ -1,0 +1,22 @@
+# Web & UI
+flask
+streamlit
+waitress
+
+# Data Handling
+numpy
+pandas
+
+# Machine Learning Engines
+scikit-learn
+xgboost
+tensorflow-cpu
+joblib
+
+# Utilities
+protobuf==3.20.*
+
+#Data Visualization
+matplotlib
+seaborn
+plotly
