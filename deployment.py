@@ -167,15 +167,19 @@ if pipeline is not None:
 
     with col_status:
         st.markdown("### 🔔 Operational Status")
+# Dynamic capacity
+capacity = max(1000, final_output * 1.3)
+load_percent = (final_output / capacity) * 100
 
-        if load_percent <= 5:
-            st.error("🛑 NO GENERATION STATE")
-        elif load_percent <= 40:
-            st.warning("⚠️ SUBOPTIMAL OUTPUT")
-        elif load_percent <= 75:
-            st.info("⚡ NOMINAL PERFORMANCE")
-        else:
-            st.success("✅ PEAK GENERATION")
+# Better thresholds
+if load_percent <= 2:
+    st.error("🛑 NO GENERATION")
+elif load_percent <= 25:
+    st.warning("⚠️ LOW GENERATION")
+elif load_percent <= 60:
+    st.info("⚡ NORMAL PERFORMANCE")
+else:
+    st.success("✅ OPTIMAL / PEAK")
 
     # --- AI INSIGHT ---
     st.markdown("### 🤖 AI Insight")
